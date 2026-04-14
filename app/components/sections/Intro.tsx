@@ -129,24 +129,26 @@ export default function Intro() {
               Anushree Sharma
             </h1>
             <p className="mt-1 text-[13px] text-(--text-secondary)">
-              21 • engineer • developer • builder
+              21 • engineer • developer • designer
             </p>
           </div>
         </div>
 
-        <div className="hidden items-center gap-2.5 md:flex">
-          {socialLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-(--icon-border) bg-(--icon-surface) text-(--text-primary) transition hover:-translate-y-0.5 hover:border-white/20"
-              aria-label={`Open ${link.label}`}
-            >
-              <SocialIcon stroke={link.stroke}>{link.icon}</SocialIcon>
-            </a>
-          ))}
+        <div className="flex items-center gap-2.5">
+          <div className="hidden items-center gap-2.5 md:flex">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noreferrer" : undefined}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-(--icon-border) bg-(--icon-surface) text-(--text-primary) transition hover:-translate-y-0.5 hover:border-white/20"
+                aria-label={`Open ${link.label}`}
+              >
+                <SocialIcon stroke={link.stroke}>{link.icon}</SocialIcon>
+              </a>
+            ))}
+          </div>
           <button
             type="button"
             onClick={toggleTheme}
@@ -159,11 +161,11 @@ export default function Intro() {
       </div>
 
       <p className="mt-8 text-[17px] leading-[1.55] tracking-[-0.005em] text-(--text-secondary)">
-        <span className="text-(--text-primary)">I build from zero.</span>{" "}
-        Whether it&apos;s frontend, backend, full-stack applications, or AI-powered
-        experiences, I work across the entire development lifecycle. From UI/UX to
-        deployment to user feedback, I care less about technology debates and more about
-        delivering results that people love using.
+        <span className="text-(--text-primary)">I am a design-first developer.</span>{" "}
+        I care deeply about crafting polished, thoughtful interfaces and turning them into
+        fully functioning applications. From strong UI decisions to clean implementation,
+        I focus on building experiences that not only look good but also work smoothly in
+        the real world.
       </p>
     </section>
   );

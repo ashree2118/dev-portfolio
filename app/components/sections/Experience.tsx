@@ -7,7 +7,7 @@ const experience = [
     company: "TakeUforward",
     role: "UI/UX Intern",
     period: "Aug 2025 - April 2026",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQFBmwNKR-dcVQ/company-logo_200_200/B4DZoSsOAoIgAI-/0/1761250173462/takeuforward_logo?e=1777507200&v=beta&t=Ftjpxtys0pfPqcy31dIyV75kRQe1SJAWR4BAR5DYQfg",
+    logo: "/takeuforward_logo.jpeg",
     summary: [
       "Engineered the end-to-end UI for the TUF Plus and Free mobile app, and built responsive desktop layouts balancing performance and usability.",
       "Owned product engineering for Sheets and Track features used by 1M+ users, from interaction design to scalable component architecture.",
@@ -18,7 +18,7 @@ const experience = [
     company: "Dodox",
     role: "Web Developer Intern",
     period: "Nov 2025 - Dec 2025",
-    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHZJsmoAKVmPw/company-logo_200_200/B4DZwSvXGvKEAI-/0/1769840931723/dodox_in_logo?e=1777507200&v=beta&t=5U3zwAYU8d_npoov85vqEgSRRriaosgRJKHl35Pgydc",
+    logo: "/dodox_in_logo.jpeg",
     summary: [
       "Contributed to production-grade web applications by implementing core frontend and backend features for reliable, real-world usage.",
       "Resolved day-to-day development issues across the codebase, including bug fixes, API integrations, and edge-case failures.",
@@ -29,7 +29,7 @@ const experience = [
     company: "Quvor",
     role: "UI/UX Intern",
     period: "Sept 2025 - Oct 2025",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQGCKYtAVVPNng/company-logo_200_200/company-logo_200_200/0/1630610640856/quvor_logo?e=1777507200&v=beta&t=Ley2Wwb3CpFgaLnfoJ4WwgF-ut_oM4Eaga9UxdlO-tY",
+    logo: "/quvor_logo.jpeg",
     summary: [
       "Designed the company landing page with a strong focus on user flow, visual hierarchy, and UX-led decision making.",
       "Created reusable UI components, structured layouts, and polished high-fidelity mockups aligned with the brand design system.",
@@ -59,7 +59,10 @@ export default function Experience() {
                   <img
                     src={item.logo}
                     alt={`${item.company} logo`}
-                    className="mt-0.5 h-10 w-10 shrink-0 rounded-full bg-(--panel-elevated) object-cover"
+                    width={40}
+                    height={40}
+                    loading="eager"
+                    className="mt-0.5 block h-10 w-10 shrink-0 overflow-hidden rounded-full border border-(--card-border) bg-(--panel-elevated) object-cover"
                   />
 
                   <div>
