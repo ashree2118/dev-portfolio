@@ -115,7 +115,7 @@ export default function Projects() {
                     {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="rounded border border-(--chip-border) bg-(--chip-bg) px-2 py-0.5 text-[11px] text-(--chip-text)"
+                        className="rounded bg-(--chip-bg) px-2 py-0.5 text-[11px] text-(--chip-text)"
                       >
                         {tech}
                       </span>
