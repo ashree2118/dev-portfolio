@@ -123,7 +123,7 @@ export default function Intro() {
           />
           <div>
             <h1
-              className="text-[52px] leading-none tracking-tight text-(--text-primary)"
+              className="lg:text-[52px] text-[32px] leading-none tracking-tight text-(--text-primary)"
               style={{ fontFamily: 'var(--font-instrument-serif), "Instrument Serif", serif' }}
             >
               Anushree Sharma
