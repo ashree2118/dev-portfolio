@@ -5,7 +5,7 @@ import { useState } from "react";
 const experience = [
   {
     company: "TakeUforward",
-    role: "UI/UX Intern",
+    role: "Product Design Intern",
     period: "Aug 2025 - April 2026",
     logo: "/takeuforward_logo.jpeg",
     summary: [
