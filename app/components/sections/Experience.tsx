@@ -6,7 +6,7 @@ const experience = [
   {
     company: "TakeUforward",
     role: "Product Design Intern",
-    period: "Aug 2025 - April 2026",
+    period: "Jan 2026 - Present",
     logo: "/takeuforward_logo.jpeg",
     summary: [
       "Engineered the end-to-end UI for the TUF Plus and Free mobile app, and built responsive desktop layouts balancing performance and usability.",
