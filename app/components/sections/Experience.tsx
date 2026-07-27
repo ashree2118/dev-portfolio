@@ -27,7 +27,7 @@ const experience = [
   },
   {
     company: "Quvor",
-    role: "UI/UX Intern",
+    role: "Product Design Intern",
     period: "Sept 2025 - Oct 2025",
     logo: "/quvor_logo.jpeg",
     summary: [
