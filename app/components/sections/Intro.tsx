@@ -34,7 +34,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/anushree-558056292/",
+    href: "https://www.linkedin.com/in/anushree-sharma-558056292/",
     stroke: false,
     icon: (
       <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.83v2.05h.05C11.93 8.98 13.6 8 15.8 8c4.57 0 5.2 3.01 5.2 6.92V23h-4v-7.21c0-1.72-.03-3.94-2.4-3.94-2.4 0-2.76 1.87-2.76 3.81V23h-4V8z" />
