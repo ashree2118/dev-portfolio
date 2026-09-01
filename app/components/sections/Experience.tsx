@@ -6,12 +6,12 @@ const experience = [
   {
     company: "TakeUforward",
     role: "Product Design Intern",
-    period: "Jan 2026 - Present",
+    period: "Jan 2026 - Aug 2026",
     logo: "/takeuforward_logo.jpeg",
     summary: [
-      "Engineered the end-to-end UI for the TUF Plus and Free mobile app, and built responsive desktop layouts balancing performance and usability.",
-      "Owned product engineering for Sheets and Track features used by 1M+ users, from interaction design to scalable component architecture.",
-      "Drove user journey redesign across key touchpoints, translating product requirements into intuitive, production-ready interfaces.",
+      "Engineered the end-to-end UI for TUF Plus and Free mobile app, and built responsive layouts for desktop - balancing performance and usability across platforms.",
+      "Owned the product design for AI tutor and timer features, used by over 1M+ users - from interaction design to scalable component architecture.",
+      "Drove user journey redesign across all touchpoints, translating product requirements into intuitive, production-ready interfaces."
     ],
   },
   {

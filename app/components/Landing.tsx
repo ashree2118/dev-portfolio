@@ -15,7 +15,7 @@ export default function LandingPage() {
         <div className="slanted-lines slanted-lines-right" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[780px] border-l border-r border-(--line-color)">
+      <div className="relative z-10 mx-auto w-full max-w-[860px] border-l border-r border-(--line-color)">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.012),transparent_18%)]" />
 
         <div className="relative z-10 mx-auto flex w-full flex-col">

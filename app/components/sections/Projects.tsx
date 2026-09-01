@@ -4,6 +4,27 @@ import Image from "next/image";
 
 const projects = [
   {
+    name: "Autocode",
+    period: "August 2026",
+    image: "/autocode.png",
+    stack: ["TypeScript", "Node.js", "Anthropic API", "PostgreSQL", "pgvector", "Docker", "MCP"],
+    points: [
+      "Built a Claude Code style autonomous agent using RAG, tool calling, memory, Docker sandboxes, and MCP to resolve GitHub issues, test fixes, and open PRs.",
+    ],
+    code: "https://github.com/ashree2118/ai",
+  },
+  {
+    name: "CodeEX",
+    period: "June 2026",
+    image: "/codeex.png",
+    stack: ["Node.js", "Express", "PostgreSQL", "Redis", "BullMQ", "Docker", "WebSockets"],
+    points: [
+      "A Production-grade asynchronous online judge with BullMQ, Docker sandboxing, Redis, PostgreSQL, WebSockets, isolation, retries, caching, and load testing.",
+    ],
+    live: "https://code-executer-green.vercel.app/",
+    code: "https://github.com/ashree2118/code-executer",
+  },
+  {
     name: "Meetrix",
     period: "April 2026",
     image: "/meetrix.png",
@@ -68,7 +89,8 @@ export default function Projects() {
                 alt={`${project.name} preview`}
                 width={640}
                 height={300}
-                className="h-36 w-full object-cover"
+                className="h-40 w-full object-fill
+                "
               />
             </div>
 
