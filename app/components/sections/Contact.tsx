@@ -4,7 +4,7 @@ export default function Contact() {
     { label: "Twitter", href: "https://x.com/anushree210" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/anushree-sharma-558056292/" },
     { label: "Mail", href: "mailto:ashree2118@gmail.com" },
-    { label: "Resume", href: "https://drive.google.com/file/d/1eSoJw07I4MWHWgPoYFT26R5PPYn6WDVx/view?usp=sharing" },
+    { label: "Resume", href: "https://drive.google.com/file/d/1C24ycPMDqeATZoYyIcCPmuo0V3UkQwdv/view?usp=sharing" },
   ];
 
   return (

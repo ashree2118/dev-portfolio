@@ -22,7 +22,7 @@ const socialLinks = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1eSoJw07I4MWHWgPoYFT26R5PPYn6WDVx/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1C24ycPMDqeATZoYyIcCPmuo0V3UkQwdv/view?usp=sharing",
     stroke: true,
     icon: (
       <>
