@@ -88,7 +88,7 @@ export default function Projects() {
                 src={project.image}
                 alt={`${project.name} preview`}
                 width={640}
-                height={300}
+                height={240}
                 className="h-40 w-full object-fill
                 "
               />
