@@ -4,6 +4,15 @@ import { useState } from "react";
 
 const experience = [
   {
+    company: "Omnisavant",
+    role: "Software developer Intern",
+    period: "Sept 2026 - Present",
+    logo: "/omnisavant.png",
+    summary: [
+      "Working alongside the product team to design and implement new features for the autonomous product demo agent, ensuring a seamless user experience.",
+    ],
+  },
+  {
     company: "TakeUforward",
     role: "Product Design Intern",
     period: "Jan 2026 - Aug 2026",
