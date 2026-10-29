@@ -76,7 +76,7 @@ export default function Experience() {
 
                   <div>
                     <div className="flex items-center gap-1.5">
-                      <h2 className="text-[14px] leading-none tracking-[-0.01em] text-(--text-primary) font-(--font-instrument-serif)">
+                      <h2 className="text-[18px] leading-none tracking-[-0.01em] text-(--text-primary) font-(family-name:--font-instrument-serif)">
                         {item.company}
                       </h2>
                       <svg

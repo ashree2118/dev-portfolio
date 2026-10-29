@@ -1,5 +1,6 @@
 import Intro from "./sections/Intro";
 import Experience from "./sections/Experience";
+import CaseStudies from "./sections/CaseStudies";
 import Projects from "./sections/Projects";
 import GitHub from "./sections/GitHub";
 import Stacks from "./sections/Stacks";
@@ -23,6 +24,7 @@ export default function LandingPage() {
             <Intro />
             <Stacks />
             <Experience />
+            <CaseStudies />
             <Projects />           
             <GitHub />            
             <OpenSource />

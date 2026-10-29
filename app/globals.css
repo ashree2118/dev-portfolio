@@ -5,6 +5,7 @@
   --panel-bg: #111318;
   --panel-elevated: #222222;
   --panel-muted: #131722;
+  --figure-bg: #36322f;
   --text-primary: #f4f4f5;
   --text-secondary: #a0a6b1;
   --text-muted: #8f97a4;
@@ -36,6 +37,7 @@
   --panel-bg: #ffffff;
   --panel-elevated: #eef2f8;
   --panel-muted: #f7f9fc;
+  --figure-bg: #ebe8e6;
   --text-primary: #151922;
   --text-secondary: #4f5869;
   --text-muted: #667085;
@@ -68,6 +70,7 @@
     --panel-bg: #ffffff;
     --panel-elevated: #eef2f8;
     --panel-muted: #f7f9fc;
+    --figure-bg: #ebe8e6;
     --text-primary: #151922;
     --text-secondary: #4f5869;
     --text-muted: #667085;
