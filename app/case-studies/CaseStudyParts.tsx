@@ -35,7 +35,7 @@ export function CaseStudyHero({
         ))}
       </ul>
 
-      <div className="mt-8 overflow-hidden rounded-xl border border-(--card-border) bg-(--panel-muted)">
+      <div className="mt-8 overflow-hidden rounded-xl border border-(--card-border) bg-(--figure-bg)">
         <Image
           src={cover.src}
           alt={cover.alt}
@@ -109,27 +109,45 @@ export function Figure({
   images,
   caption,
   columns = 1,
+  aspect = "4 / 3",
 }: {
   images: FigureImage[];
   caption: string;
   columns?: 1 | 2;
+  /** Shared box shape for side-by-side images, so both boxes line up. */
+  aspect?: string;
 }) {
   return (
     <figure className="py-3">
-      <div className={`grid gap-5 ${columns === 2 ? "sm:grid-cols-2 sm:items-start" : ""}`}>
+      <div className={`grid gap-5 ${columns === 2 ? "sm:grid-cols-2" : ""}`}>
         {images.map((image) => (
           <div key={image.src}>
             {image.label && <p className="mb-2 text-xs text-(--text-muted)">{image.label}</p>}
-            <div className="overflow-hidden rounded-lg border border-(--card-border) bg-(--panel-muted)">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                sizes={columns === 2 ? "(min-width: 640px) 330px, 100vw" : "(min-width: 768px) 672px, 100vw"}
-                className="h-auto w-full"
-              />
-            </div>
+            {columns === 2 ? (
+              <div
+                className="relative overflow-hidden rounded-lg border border-(--card-border) bg-(--figure-bg)"
+                style={{ aspectRatio: aspect }}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 640px) 330px, 100vw"
+                  className="object-contain p-3"
+                />
+              </div>
+            ) : (
+              <div className="overflow-hidden rounded-lg border border-(--card-border) bg-(--figure-bg)">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  sizes="(min-width: 768px) 672px, 100vw"
+                  className="h-auto w-full"
+                />
+              </div>
+            )}
           </div>
         ))}
       </div>

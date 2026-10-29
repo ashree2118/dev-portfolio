@@ -219,6 +219,7 @@ export default function TakeUForwardCaseStudy() {
         </p>
         <Figure
           columns={2}
+          aspect="1 / 1"
           images={[
             { src: "/gami-1.png", alt: "Coin total, ranks and the monthly leaderboard", width: 721, height: 841 },
             { src: "/gami-2.png", alt: "Title progression earned by collecting trophies", width: 925, height: 737 },
@@ -262,6 +263,7 @@ export default function TakeUForwardCaseStudy() {
         />
         <Figure
           columns={2}
+          aspect="1 / 1"
           images={[
             { src: "/case-studies/tufy-different-drafts.webp", alt: "Tufy drafts: jellyfish and water-drop characters, with the selected design marked", width: 2000, height: 1861 },
             { src: "/tufy-final.png", alt: "The final Tufy mascot", width: 878, height: 856 },

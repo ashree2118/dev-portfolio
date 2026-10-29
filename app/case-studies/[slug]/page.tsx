@@ -25,7 +25,7 @@ export async function generateMetadata({
 
   return {
     title: `${study.name} Case Study | Anushree`,
-    description: `Case study for ${study.name}.`,
+    description: study.summary,
   };
 }
 
@@ -46,10 +46,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       <main className="relative z-10 mx-auto min-h-screen w-full max-w-[720px] border-x border-(--line-color) px-5 py-10 md:px-6 md:py-14">
         <Link
-          href="/case-studies"
+          href="/#case-studies"
           className="text-xs text-(--text-muted) transition hover:text-(--text-primary)"
         >
-          <span aria-hidden>←</span> All case studies
+          <span aria-hidden>←</span> Back to portfolio
         </Link>
 
         <header className="mt-10 border-b border-(--line-color) pb-7">
@@ -62,13 +62,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         </header>
 
         <article aria-label={`${study.name} case study content`}>
-          {slug === "takeuforward" ? (
-            <TakeUForwardCaseStudy />
-          ) : slug === "ezmeetup" ? (
-            <EzMeetupCaseStudy />
-          ) : (
-            <div className="min-h-[55vh]" />
-          )}
+          {slug === "takeuforward" ? <TakeUForwardCaseStudy /> : <EzMeetupCaseStudy />}
         </article>
       </main>
     </div>
