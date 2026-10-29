@@ -3,7 +3,6 @@ import {
   CaseStudyHero,
   CaseStudySection,
   Figure,
-  NumberedList,
   PullQuote,
   Strong,
   SubHeading,
@@ -14,116 +13,99 @@ import {
 const meta = [
   {
     label: "Role",
-    value: "UI/UX for the AI tutor, focus timer and Tufy. Rebrand and gamification with the team.",
+    value: "End-to-end UI/UX for the AI tutor, focus timer and Tufy. Rebrand and gamification with the team.",
   },
   { label: "Timeline", value: "Jan–Apr 2026 remote, Jul–Aug 2026 onsite" },
   { label: "Team", value: "Design team" },
   { label: "Scale", value: "About 1.5 million learners" },
 ];
 
-const tags = ["Product design", "AI-powered learning", "Interaction design", "Gamification", "Visual identity"];
+const tags = ["Product design", "AI-powered learning", "Interaction design"];
 
 export default function TakeUForwardCaseStudy() {
   return (
     <div className="pb-12">
       <CaseStudyHero
-        lead="Evolving the learning experience at TakeUForward"
+        lead="Designing an AI tutor that helps students think, not just code"
         tags={tags}
         cover={{ src: "/case-studies/tuf-collage.webp", alt: "Collage of TakeUForward product screens", width: 2000, height: 1331 }}
         meta={meta}
       />
 
-      <CaseStudySection id="overview" title="Overview">
+      <CaseStudySection id="challenge" title="The challenge">
         <p>
-          TakeUForward helps students prepare for technical interviews and sharpen
-          their problem-solving. About 1.5 million learners use it for their
-          preparation.
+          Coding practice is full of moments when students get stuck. They might not
+          understand what a problem is asking, struggle to find an approach, or submit
+          code that doesn&apos;t work.
         </p>
         <p>
-          The product was growing, student feedback was coming in, and the audience
-          was becoming more global. We wanted the platform to feel more welcoming,
-          without breaking the routines existing learners rely on.
+          An AI assistant can help, but there&apos;s a tension: if it immediately
+          provides the answer, it may solve the immediate problem without helping the
+          student learn how to solve the next one.
         </p>
         <p>
-          I worked on four connected pieces: an <Strong>AI tutor</Strong> that guides
-          students through problems, a <Strong>focus timer</Strong> for single
-          questions, <Strong>gamification</Strong> that rewards steady practice,
-          and <Strong>Tufy</Strong>, a mascot that gives the tutor a face. I also
-          worked with the team on a wider visual rebrand.
+          At TakeUForward, we wanted to improve the learning experience while
+          supporting students in their preparation. My focus was to design an AI tutor
+          that could provide help at the right moment without taking over the
+          problem-solving process.
         </p>
-        <PullQuote label="The central question">
-          How might we make coding practice feel more approachable and supportive,
-          without taking away the challenge of learning?
+        <PullQuote label="The design question">
+          How might we help students get unstuck while keeping them actively involved
+          in solving the problem?
         </PullQuote>
       </CaseStudySection>
 
-      <CaseStudySection id="opportunity" title="Finding the opportunity">
+      <CaseStudySection id="approach" title="My approach">
         <p>
-          We drew on user interviews and feedback, product analytics, competitor
-          analysis, heuristic reviews, usability testing, and conversations with the
-          team and stakeholders. Three opportunities came out of it.
+          I worked on the AI tutor&apos;s end-to-end UI/UX, drawing on user interviews
+          and feedback, product analytics, competitor analysis, heuristic evaluation,
+          usability testing, and team discussions.
         </p>
-        <NumberedList
+        <p>The design direction centered on three principles:</p>
+        <BulletList
           items={[
-            {
-              title: "Feel more welcoming",
-              detail: "Rethink a visual identity that leaned heavily on orange and glassmorphism.",
-            },
-            {
-              title: "Help at the right moment",
-              detail: "Make AI guidance contextual, and focused on helping students reason rather than just reach an answer.",
-            },
-            {
-              title: "Keep students practicing",
-              detail: "Give students tools to manage their sessions, see their progress and come back consistently.",
-            },
+            <><Strong>Meet students where they are.</Strong> A student who hasn&apos;t started needs different guidance from someone who has written code but received an incorrect result.</>,
+            <><Strong>Guide before giving answers.</Strong> Hints and directions should help students reason through the problem, with the full solution available when explicitly requested.</>,
+            <><Strong>Make help contextual.</Strong> Students need different kinds of assistance depending on whether they&apos;re understanding a problem, coding, reviewing a submission, or watching an explanation.</>,
           ]}
         />
+        <p>These principles shaped the tutor&apos;s interaction design.</p>
       </CaseStudySection>
 
-      <CaseStudySection id="visual-identity" title="Refreshing the visual identity" role="with the design team">
+      <CaseStudySection id="student-state" title="Designing for the student's current state">
+        <SubHeading>One tutor, different kinds of guidance</SubHeading>
         <p>
-          The old interface used orange and glassmorphism almost everywhere. Together
-          with the team, we moved the brand from orange to blue, with trust and
-          approachability as the guiding qualities.
+          A generic chat interface gives students a place to ask questions, but it
+          doesn&apos;t necessarily account for where they are in the problem-solving
+          process.
         </p>
-        <p>
-          It was more than a color swap. We used it to rethink how the product
-          expresses itself through color, surfaces and hierarchy.
-        </p>
-        <Figure
-          images={[
-            { src: "/old-ui.svg", alt: "Previous TakeUForward problem page in orange", width: 1440, height: 1024, label: "Before" },
-            { src: "/new-ui.svg", alt: "Updated TakeUForward problem page in blue", width: 1440, height: 900, label: "After" },
-          ]}
-          caption="A problem page before and after the rebrand."
-        />
-      </CaseStudySection>
-
-      <CaseStudySection id="ai-tutor" title="An AI tutor that guides instead of solves" role="end-to-end UI/UX">
-        <p>
-          A good coding tutor does not just hand over a solution. It helps learners
-          understand the problem, spot their mistakes and find their own approach. I
-          designed the tutor around that idea: respond to where the student is,
-          rather than treating every request as a question with one answer.
-        </p>
-
-        <SubHeading>Guidance that follows the student&apos;s progress</SubHeading>
-        <p>
-          The tutor lives in the code editor as a <Strong>Guide Me</Strong> button.
-          When a student gets stuck, it adapts its help to where they are.
-        </p>
+        <p>I designed the tutor around four student states:</p>
         <TermGrid
           items={[
-            { term: "Not started", detail: "Help them find a way in." },
-            { term: "Started, but off track", detail: "Nudge them to rethink the approach." },
-            { term: "Wrong submission", detail: "Help them find what is going wrong." },
-            { term: "Partly solved", detail: "Guide them through the remaining steps." },
+            { term: "Not started", detail: "Help the student understand the problem and find a way to begin." },
+            { term: "Started, but off track", detail: "Encourage the student to reconsider their approach instead of immediately replacing it with a solution." },
+            { term: "Incorrect submission", detail: "Help the student investigate what might be going wrong." },
+            { term: "Partially solved", detail: "Guide the student through the remaining steps." },
           ]}
         />
         <p>
-          Hints come first. The full solution only appears when a student asks for
-          it, so the tutor feels like a learning companion, not a shortcut.
+          The key design decision was to treat these as different learning situations,
+          rather than responding to every student in the same way.
+        </p>
+        <p>
+          A beginner may need help understanding the problem. Someone who has already
+          written code may benefit more from a targeted hint. A student who has solved
+          part of the problem needs help progressing from where they are, not starting
+          over.
+        </p>
+        <p>
+          The tutor was designed to provide hints and directions first, without
+          revealing the complete solution unless the student explicitly requested it.
+        </p>
+        <p>
+          <Strong>Why this matters:</Strong> The goal was not simply to make AI
+          assistance available. It was to make that assistance appropriate to the
+          student&apos;s current task.
         </p>
         <Figure
           columns={2}
@@ -131,41 +113,30 @@ export default function TakeUForwardCaseStudy() {
             { src: "/case-studies/guide-me-editor.webp", alt: "Guide Me button in the code editor", width: 936, height: 870 },
             { src: "/case-studies/tufy-intro.webp", alt: "Tufy introducing itself and personalization options", width: 1160, height: 714 },
           ]}
-          caption="The Guide Me button in the editor, and Tufy's first-run screens where students personalize the tutor."
+          caption="Where students ask for help: the Guide Me button in the editor, and Tufy's first-run screens."
         />
+      </CaseStudySection>
 
-        <SubHeading>Help wherever students are</SubHeading>
+      <CaseStudySection id="learning-interaction" title="Designing the tutor as a learning interaction">
+        <SubHeading>Help should move the student forward</SubHeading>
         <p>
-          The tutor also appears in other parts of the platform, and its job changes
-          with the task in front of the student.
+          The tutor was intended to act as a guide rather than a shortcut to the answer.
         </p>
-        <div className="overflow-x-auto rounded-lg border border-(--card-border)">
-          <table className="w-full min-w-[440px] text-left text-sm leading-6">
-            <thead className="border-b border-(--card-border) bg-(--panel-elevated)">
-              <tr>
-                <th scope="col" className="w-40 px-4 py-2.5 text-xs font-medium text-(--text-muted)">Where</th>
-                <th scope="col" className="px-4 py-2.5 text-xs font-medium text-(--text-muted)">What the tutor does</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-(--line-color)">
-              {[
-                ["Code editor", "Guides students through the problem with hints that fit their progress."],
-                ["Problem statement", "Simplifies the problem so it is easier to understand."],
-                ["Submissions", "Explains the submission, its complexity and its efficiency."],
-                ["Editorial video", "Explains a specific topic from the video."],
-              ].map(([where, what]) => (
-                <tr key={where}>
-                  <th scope="row" className="px-4 py-3 align-top font-medium text-(--text-primary)">{where}</th>
-                  <td className="px-4 py-3">{what}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
         <p>
-          Students get help where they already are, instead of leaving their flow to
-          look for it elsewhere.
+          I designed the interaction around progressive assistance: start with
+          guidance, help the student reason through the next step, and provide the full
+          solution only when explicitly requested.
         </p>
+        <p>
+          This creates a different experience from simply displaying a complete answer
+          as soon as a student asks for help.
+        </p>
+        <p>
+          The important distinction is between <Strong>giving information and
+          supporting progress</Strong>. The interface needs to help students understand
+          what to do next while leaving room for them to think and act.
+        </p>
+        <p>The conversation below shows this in practice.</p>
         <Figure
           images={[
             { src: "/case-studies/tufy-chat-collage.webp", alt: "AI tutor conversations moving from hints to pseudocode to full code", width: 1942, height: 1526 },
@@ -174,48 +145,107 @@ export default function TakeUForwardCaseStudy() {
         />
       </CaseStudySection>
 
-      <CaseStudySection id="focus-timer" title="A focus timer for each question" role="end-to-end UI/UX">
+      <CaseStudySection id="contexts" title="One assistant across different learning contexts">
         <p>
-          I designed a focus timer that lets students manage their time without
-          leaving the problem. Students can:
+          The tutor also appears in different parts of the product. Its purpose changes
+          according to what the student is doing.
         </p>
-        <BulletList
-          items={[
-            "Start a timer for a single question.",
-            "Pause, resume or restart it.",
-            "Add more time when the countdown ends.",
-            "Switch to a stopwatch to track elapsed time instead.",
-          ]}
-        />
+        <div className="overflow-x-auto rounded-lg border border-(--card-border)">
+          <table className="w-full min-w-[440px] text-left text-sm leading-6">
+            <thead className="border-b border-(--card-border) bg-(--panel-elevated)">
+              <tr>
+                <th scope="col" className="w-40 px-4 py-2.5 text-xs font-medium text-(--text-muted)">Context</th>
+                <th scope="col" className="px-4 py-2.5 text-xs font-medium text-(--text-muted)">Design purpose</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-(--line-color)">
+              {[
+                ["Coding editor", "Guide the student through a problem using contextual hints."],
+                ["Problem statement", "Simplify the problem to make it easier to understand."],
+                ["Submissions", "Explain the submission, including complexity and efficiency."],
+                ["Editorial video", "Explain a specific topic from the video."],
+              ].map(([context, purpose]) => (
+                <tr key={context}>
+                  <th scope="row" className="px-4 py-3 align-top font-medium text-(--text-primary)">{context}</th>
+                  <td className="px-4 py-3">{purpose}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p>
-          Adding time matters most. When the clock runs out, students can keep
-          working on the problem instead of abandoning the session.
+          This required thinking beyond the chat window itself. The same assistant
+          needed to fit into different workflows and provide the kind of help relevant
+          to each one.
+        </p>
+        <p>
+          For example, a student reading a problem statement may need clarification
+          before attempting it. A student reviewing a submission may want to understand
+          its complexity or efficiency. Someone watching an editorial may need a
+          particular concept explained without losing track of the lesson.
+        </p>
+        <p>
+          The design goal was to bring assistance closer to the student&apos;s current
+          task rather than treating every interaction as a generic conversation.
+        </p>
+      </CaseStudySection>
+
+      <CaseStudySection id="tufy" title="Giving the tutor a personality through Tufy">
+        <SubHeading>Making the assistant recognizable</SubHeading>
+        <p>
+          I also designed Tufy, a mascot intended to give the AI tutor a recognizable
+          face and contribute to TakeUForward&apos;s identity.
+        </p>
+        <p>
+          I explored several character directions, including a jellyfish-inspired tutor
+          and water- or flame-inspired forms. The aim was to create something friendly
+          and distinctive rather than another generic assistant symbol.
+        </p>
+        <p>
+          One principle guided the exploration: Tufy should be recognizable from its
+          core shape, not depend on an accessory to establish its identity.
+        </p>
+        <p>
+          I explored large eyes and an innocent smile to communicate a friendly,
+          approachable personality.
+        </p>
+        <p>
+          The work extended beyond the illustration itself to consider how Tufy could
+          appear in different product contexts, including loading and empty states.
+        </p>
+        <Figure
+          columns={2}
+          aspect="1 / 1"
+          images={[
+            { src: "/case-studies/tufy-different-drafts.webp", alt: "Tufy drafts: jellyfish and water-drop characters, with the selected design marked", width: 2000, height: 1861 },
+            { src: "/case-studies/tufy-mascot.webp", alt: "The final Tufy mascot", width: 540, height: 568 },
+          ]}
+          caption="Character directions, from jellyfish to water-drop forms, and the final Tufy."
+        />
+      </CaseStudySection>
+
+      <CaseStudySection id="practice" title="Supporting the wider practice experience">
+        <p>
+          Alongside the tutor, I designed a focus timer that lets students start, pause,
+          resume, and restart timing for an individual question, add time when the
+          countdown ends, or use a stopwatch instead.
+        </p>
+        <p>
+          The intent was to keep time management within the problem-solving workflow
+          rather than requiring students to use a separate tool.
         </p>
         <Figure
           images={[
             { src: "/case-studies/timer-states.webp", alt: "Focus timer states inside the problem page", width: 1260, height: 807 },
             { src: "/case-studies/timer-controls.webp", alt: "Restart and resume controls next to a running timer", width: 1186, height: 600 },
           ]}
-          caption="Timer states inside the problem page, and the restart and resume controls."
-        />
-      </CaseStudySection>
-
-      <CaseStudySection id="gamification" title="Rewarding steady practice" role="with the design team">
-        <p>
-          Gamification links what students do on the platform to progress they can
-          see. Four pieces work together.
-        </p>
-        <TermGrid
-          items={[
-            { term: "Coins", detail: "Earned through daily activities, learning and practice." },
-            { term: "Streaks", detail: "Show consistency over time." },
-            { term: "Leaderboards", detail: "Add a social side to progress." },
-            { term: "Rewards", detail: "Coins can be spent on goodies and AI credits." },
-          ]}
+          caption="Focus timer and stopwatch inside the problem page, and the restart and resume controls."
         />
         <p>
-          The loop is simple: practice, earn coins, spend them on rewards. It is part
-          of the practice experience, not a separate feature on the side.
+          I also collaborated with the design team on gamification, including coins,
+          streaks, leaderboards, and rewards. Coins can be used toward goodies and AI
+          credits, connecting activity on the platform with visible progress and
+          rewards.
         </p>
         <Figure
           columns={2}
@@ -226,111 +256,91 @@ export default function TakeUForwardCaseStudy() {
           ]}
           caption="Coins, ranks and the monthly leaderboard, and titles earned by collecting trophies."
         />
-      </CaseStudySection>
-
-      <CaseStudySection id="tufy" title="Tufy, a face for the AI tutor" role="end-to-end design">
         <p>
-          I wanted the tutor to have a recognizable face and personality, not just
-          another chat window. That became Tufy, a mascot for the tutor and for
-          TakeUForward&apos;s brand.
+          The wider product also underwent a visual rebrand. Working with the team, we
+          moved from an interface that relied heavily on orange and glassmorphism
+          toward a blue visual direction intended to feel more welcoming and
+          trustworthy.
         </p>
-        <p>
-          Duolingo and GitHub&apos;s AI products showed me how a character can make a
-          product memorable and an assistant feel approachable.
-        </p>
-
-        <SubHeading>Exploring directions</SubHeading>
-        <p>
-          I sketched many concepts before settling on one: a dog-like companion, a
-          jellyfish-inspired tutor, and characters based on water and flame. Each was
-          a different take on a friendly learning companion.
-        </p>
-
-        <SubHeading>A silhouette that stands on its own</SubHeading>
-        <p>
-          Recognizability was the main test. Tufy had to be identifiable without an
-          accessory like a hat. Accessories can come and go, so the character itself
-          had to be distinctive. Large, expressive eyes and an innocent smile keep it
-          friendly, so it feels like it helps rather than intimidates.
-        </p>
-        <TermGrid
-          items={[
-            { term: "Distinctive silhouette", detail: "Recognizable without extra elements." },
-            { term: "Friendly expression", detail: "Big eyes and a warm look." },
-            { term: "Clear personality", detail: "Feels like both a companion and a tutor." },
-            { term: "Flexible", detail: "Works across different parts of the product." },
-          ]}
-        />
         <Figure
-          columns={2}
-          aspect="1 / 1"
           images={[
-            { src: "/case-studies/tufy-different-drafts.webp", alt: "Tufy drafts: jellyfish and water-drop characters, with the selected design marked", width: 2000, height: 1861 },
-            { src: "/case-studies/tufy-mascot.webp", alt: "The final Tufy mascot", width: 540, height: 568 },
+            { src: "/old-ui.svg", alt: "Previous TakeUForward problem page in orange", width: 1440, height: 1024, label: "Before" },
+            { src: "/new-ui.svg", alt: "Updated TakeUForward problem page in blue", width: 1440, height: 900, label: "After" },
           ]}
-          caption="Mascot drafts, from jellyfish to water-drop characters, and the final Tufy."
+          caption="A problem page before and after the rebrand."
         />
-
-        <SubHeading>Beyond the illustration</SubHeading>
         <p>
-          I also explored Tufy in loading and empty states, moments that are usually
-          purely functional. The goal was for Tufy to be part of the product&apos;s
-          identity, not a mascot that shows up in one place.
+          These areas supported the broader goal of improving the practice experience,
+          with the AI tutor at the center of my work.
         </p>
       </CaseStudySection>
 
-      <CaseStudySection id="constraints" title="Designing for an established product">
+      <CaseStudySection id="established-product" title="Designing within an established product">
         <p>
-          With a large base of active learners, we were evolving a product people
-          already used every day, not starting from scratch. Every new feature had to
-          fit familiar workflows. The tutor had to make sense in each context, the
-          timer needed clear controls in every state, and the mascot and rewards had
-          to feel like part of the same product.
+          TakeUForward already had a large base of learners who used the platform for
+          preparation. This meant the work had to fit into an existing product, not
+          start from scratch.
         </p>
         <p>
-          That meant close collaboration across the design team, respect for the
-          existing interface, and steady refinement as the product changed.
+          The tutor needed to make sense in different contexts. The timer needed
+          understandable controls across its states. The mascot and gamification needed
+          to feel connected to the wider product.
+        </p>
+        <p>
+          I worked within the design team and owned the end-to-end UI/UX for the AI
+          tutor, timer, and mascot, while collaborating on the rebrand and
+          gamification.
+        </p>
+        <p>
+          The main challenge was making new experiences fit naturally into existing
+          learning workflows.
         </p>
       </CaseStudySection>
 
-      <CaseStudySection id="outcomes" title="Outcomes">
+      <CaseStudySection id="outcomes" title="Outcomes and ongoing learning">
         <p>
-          The main pieces of this work shipped to the live product. After launch we
-          gathered another round of user feedback, and the product keeps improving
-          based on it.
+          The major pieces of work shipped to the live product, and we collected another
+          round of user feedback after launch. The team continues to improve the
+          experience.
         </p>
-        <SubHeading>What I&apos;d measure next</SubHeading>
-        <BulletList
-          items={[
-            "How many students use the tutor, come back to it, and find it helpful.",
-            "Timer adoption, and which controls students actually use.",
-            "Streak participation and coin-earning activity.",
-            "Reward redemption and AI credit use.",
-            "Feedback on the new visual identity and on Tufy.",
-          ]}
-        />
-      </CaseStudySection>
-
-      <CaseStudySection id="reflection" title="Reflection">
         <p>
-          This project brought together very different kinds of design work:
-          evolving a visual identity, designing contextual AI interactions,
-          supporting practice habits and creating a character.
+          There are no verified numbers yet on retention, learning outcomes or
+          engagement, so I&apos;m not claiming any. The next step in evaluating the
+          design would be to examine:
         </p>
         <BulletList
           items={[
-            <><Strong>Scale shapes every decision.</Strong> Changes had to fit the routines of students who already relied on the product.</>,
-            <><Strong>Context is the interaction.</Strong> The same assistant has to behave differently when a student is reading a problem, writing code, reviewing a submission or watching a video.</>,
-            <><Strong>Identity comes from form.</Strong> Tufy had to be recognizable from its shape alone, not its accessories.</>,
-            <><Strong>Shipping is not the end.</Strong> Gathering feedback and refining is part of the work.</>,
+            "How students use and return to the tutor.",
+            "Whether the tutor's guidance helps students progress without prematurely revealing answers.",
+            "Which tutor contexts students find most useful.",
+            "How students use the focus timer and its different controls.",
+            "Whether feedback identifies problems with the mascot or updated visual identity.",
           ]}
         />
+      </CaseStudySection>
+
+      <CaseStudySection id="differently" title="What I'd do differently">
+        <p>
+          With the benefit of hindsight, I would make the evaluation of the tutor&apos;s
+          learning experience an explicit part of the design process.
+        </p>
+        <p>
+          Adoption alone would not tell me whether the tutor was helping students learn.
+          I would want to understand whether students could continue solving problems
+          after receiving a hint, whether they understood the guidance, and when they
+          felt the tutor was giving too much or too little help.
+        </p>
+        <p>
+          I would also document the relationship between each student state, the
+          guidance shown, and the intended learning outcome more explicitly. That would
+          make the design rationale easier to evaluate and the interaction easier to
+          refine.
+        </p>
         <Takeaway>
-          My work at TakeUForward was about making coding practice more approachable
-          and supportive, through contextual AI guidance, focused practice tools,
-          motivating rewards and a distinctive identity. Together they support
-          students not just while they solve one problem, but across their whole
-          practice journey.
+          This work taught me to think about AI assistance as an interaction-design
+          problem, not just a chat interface. The important question was not simply what
+          the assistant could answer, but how it could help students make progress while
+          remaining active participants in their own learning.
         </Takeaway>
       </CaseStudySection>
     </div>
