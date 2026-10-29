@@ -1,4 +1,4 @@
-type CaseStudy = {
+export type CaseStudy = {
   name: string;
   slug: string;
   period?: string;

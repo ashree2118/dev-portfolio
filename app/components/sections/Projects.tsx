@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 const projects = [
   {
@@ -75,18 +74,10 @@ export default function Projects() {
   return (
     <section id="projects" className="border-t border-(--line-color) py-10">
       <div className="mb-6">
-        <div className="flex items-center justify-between gap-4">
-          <p className="text-sm text-(--text-secondary)">Projects</p>
-          <Link
-            href="/case-studies"
-            className="text-xs text-(--text-muted) transition hover:text-(--text-primary)"
-          >
-            View case studies <span aria-hidden>→</span>
-          </Link>
-        </div>
+        <p className="text-sm text-(--text-secondary)">Projects</p>
       </div>
 
-      <div className="grid gap-5 p-[26px] md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {projects.map((project, index) => (
           <article
             key={`${project.name}-${index}`}
@@ -137,31 +128,33 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-4 flex gap-2">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs"
-                    style={{
-                      backgroundColor: "var(--button-primary-bg)",
-                      color: "var(--button-primary-text)",
-                    }}
-                  >
-                    <svg
-                      className="h-3.5 w-3.5"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      viewBox="0 0 24 24"
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs"
+                      style={{
+                        backgroundColor: "var(--button-primary-bg)",
+                        color: "var(--button-primary-text)",
+                      }}
                     >
-                      <circle cx="12" cy="12" r="10" />
-                      <path
-                        strokeLinecap="round"
-                        d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"
-                      />
-                    </svg>
-                    Website
-                  </a>
+                      <svg
+                        className="h-3.5 w-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <path
+                          strokeLinecap="round"
+                          d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"
+                        />
+                      </svg>
+                      Website
+                    </a>
+                  )}
 
                   <a
                     href={project.code}
