@@ -128,8 +128,8 @@ export default function TakeUForwardCaseStudy() {
         <Figure
           columns={2}
           images={[
-            { src: "/case-studies/tufy-entrypoint.webp", alt: "Guide Me button in the code editor", width: 953, height: 870 },
-            { src: "/case-studies/tufy-entry-2.webp", alt: "Tufy introducing itself and personalization options", width: 1160, height: 714 },
+            { src: "/case-studies/guide-me-editor.webp", alt: "Guide Me button in the code editor", width: 936, height: 870 },
+            { src: "/case-studies/tufy-intro.webp", alt: "Tufy introducing itself and personalization options", width: 1160, height: 714 },
           ]}
           caption="The Guide Me button in the editor, and Tufy's first-run screens where students personalize the tutor."
         />
@@ -193,8 +193,8 @@ export default function TakeUForwardCaseStudy() {
         </p>
         <Figure
           images={[
-            { src: "/case-studies/timer-1.webp", alt: "Focus timer states inside the problem page", width: 1260, height: 807 },
-            { src: "/case-studies/timer-2.webp", alt: "Restart and resume controls next to a running timer", width: 1192, height: 641 },
+            { src: "/case-studies/timer-states.webp", alt: "Focus timer states inside the problem page", width: 1260, height: 807 },
+            { src: "/case-studies/timer-controls.webp", alt: "Restart and resume controls next to a running timer", width: 1186, height: 600 },
           ]}
           caption="Timer states inside the problem page, and the restart and resume controls."
         />
@@ -266,7 +266,7 @@ export default function TakeUForwardCaseStudy() {
           aspect="1 / 1"
           images={[
             { src: "/case-studies/tufy-different-drafts.webp", alt: "Tufy drafts: jellyfish and water-drop characters, with the selected design marked", width: 2000, height: 1861 },
-            { src: "/case-studies/tufy-final.webp", alt: "The final Tufy mascot", width: 540, height: 568 },
+            { src: "/case-studies/tufy-mascot.webp", alt: "The final Tufy mascot", width: 540, height: 568 },
           ]}
           caption="Mascot drafts, from jellyfish to water-drop characters, and the final Tufy."
         />
