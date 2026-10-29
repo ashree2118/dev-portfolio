@@ -123,31 +123,21 @@ export function Figure({
         {images.map((image) => (
           <div key={image.src}>
             {image.label && <p className="mb-2 text-xs text-(--text-muted)">{image.label}</p>}
-            {columns === 2 ? (
-              <div
-                className="relative overflow-hidden rounded-lg border border-(--card-border) bg-(--figure-bg)"
-                style={{ aspectRatio: aspect }}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 640px) 330px, 100vw"
-                  className="object-contain p-3"
-                />
-              </div>
-            ) : (
-              <div className="overflow-hidden rounded-lg border border-(--card-border) bg-(--figure-bg)">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  sizes="(min-width: 768px) 672px, 100vw"
-                  className="h-auto w-full"
-                />
-              </div>
-            )}
+            {/* Side by side, both boxes share one shape so the pair lines up.
+                Stacked on phones, each image keeps its natural shape. */}
+            <div
+              className={`overflow-hidden rounded-lg border border-(--card-border) bg-(--figure-bg) ${columns === 2 ? "sm:relative sm:aspect-(--figure-aspect)" : ""}`}
+              style={columns === 2 ? ({ "--figure-aspect": aspect } as React.CSSProperties) : undefined}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                sizes={columns === 2 ? "(min-width: 640px) 330px, 100vw" : "(min-width: 768px) 672px, 100vw"}
+                className={`h-auto w-full ${columns === 2 ? "sm:absolute sm:inset-0 sm:h-full sm:object-contain sm:p-3" : ""}`}
+              />
+            </div>
           </div>
         ))}
       </div>
