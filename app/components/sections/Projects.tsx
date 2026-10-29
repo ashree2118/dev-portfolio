@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -74,7 +75,15 @@ export default function Projects() {
   return (
     <section id="projects" className="border-t border-(--line-color) py-10">
       <div className="mb-6">
-        <p className="text-sm text-(--text-secondary)">Projects</p>
+        <div className="flex items-center justify-between gap-4">
+          <p className="text-sm text-(--text-secondary)">Projects</p>
+          <Link
+            href="/case-studies"
+            className="text-xs text-(--text-muted) transition hover:text-(--text-primary)"
+          >
+            View case studies <span aria-hidden>→</span>
+          </Link>
+        </div>
       </div>
 
       <div className="grid gap-5 p-[26px] md:grid-cols-2">
