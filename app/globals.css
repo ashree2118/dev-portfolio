@@ -5,7 +5,7 @@
   --panel-bg: #111318;
   --panel-elevated: #222222;
   --panel-muted: #131722;
-  --figure-bg: #36322f;
+  --figure-bg: #3b3b3b;
   --text-primary: #f4f4f5;
   --text-secondary: #a0a6b1;
   --text-muted: #8f97a4;
@@ -64,8 +64,9 @@
   --graph-level-4: #216e39;
 }
 
+/* Follow the system only when the visitor has not picked dark on the site. */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme="dark"]) {
     --page-bg: #f6f7fb;
     --panel-bg: #ffffff;
     --panel-elevated: #eef2f8;
@@ -144,7 +145,7 @@ a {
 }
 
 @media (prefers-color-scheme: light) {
-  .slanted-lines {
+  :root:not([data-theme="dark"]) .slanted-lines {
     background-image: url("/side-lines-light.svg");
   }
 }
