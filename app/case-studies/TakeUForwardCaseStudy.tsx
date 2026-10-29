@@ -281,7 +281,12 @@ export default function TakeUForwardCaseStudy() {
           round of user feedback after launch. The team continues to improve the
           experience.
         </p>
-        <Testimonial author="Striver" byline="Building TakeUForward" handle="@striver_79">
+        <Testimonial
+          author="Striver"
+          byline="Building TakeUForward"
+          handle="@striver_79"
+          href="https://x.com/striver_79/status/2091066628301869155"
+        >
           <p>Last day of internship for @anushree210 (Design)</p>
           <p>
             She contributed to one of the most important things in Zenkai – TUFY! Along
