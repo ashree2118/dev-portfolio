@@ -9,6 +9,7 @@ import {
   Takeaway,
   TermGrid,
 } from "./CaseStudyParts";
+import { HintLadder } from "./CaseStudyDiagrams";
 
 const meta = [
   {
@@ -17,7 +18,7 @@ const meta = [
   },
   { label: "Timeline", value: "Jan–Apr 2026 remote, Jul–Aug 2026 onsite" },
   { label: "Team", value: "Design team" },
-  { label: "Scale", value: "About 1.5 million learners" },
+  { label: "Scale", value: "1.5 million+ learners" },
 ];
 
 const tags = ["Product design", "AI-powered learning", "Interaction design"];
@@ -99,10 +100,6 @@ export default function TakeUForwardCaseStudy() {
           over.
         </p>
         <p>
-          The tutor was designed to provide hints and directions first, without
-          revealing the complete solution unless the student explicitly requested it.
-        </p>
-        <p>
           <Strong>Why this matters:</Strong> The goal was not simply to make AI
           assistance available. It was to make that assistance appropriate to the
           student&apos;s current task.
@@ -120,17 +117,11 @@ export default function TakeUForwardCaseStudy() {
       <CaseStudySection id="learning-interaction" title="Designing the tutor as a learning interaction">
         <SubHeading>Help should move the student forward</SubHeading>
         <p>
-          The tutor was intended to act as a guide rather than a shortcut to the answer.
+          I designed the tutor as a guide, not a shortcut. Help comes in steps: a hint
+          first, then help reasoning through the next step, and the full solution only
+          when the student asks for it.
         </p>
-        <p>
-          I designed the interaction around progressive assistance: start with
-          guidance, help the student reason through the next step, and provide the full
-          solution only when explicitly requested.
-        </p>
-        <p>
-          This creates a different experience from simply displaying a complete answer
-          as soon as a student asks for help.
-        </p>
+        <HintLadder />
         <p>
           The important distinction is between <Strong>giving information and
           supporting progress</Strong>. The interface needs to help students understand
@@ -193,8 +184,8 @@ export default function TakeUForwardCaseStudy() {
       <CaseStudySection id="tufy" title="Giving the tutor a personality through Tufy">
         <SubHeading>Making the assistant recognizable</SubHeading>
         <p>
-          I also designed Tufy, a mascot intended to give the AI tutor a recognizable
-          face and contribute to TakeUForward&apos;s identity.
+          I also designed Tufy, a mascot that gives the AI tutor a recognizable face and
+          adds to TakeUForward&apos;s identity.
         </p>
         <p>
           I explored several character directions, including a jellyfish-inspired tutor
@@ -210,8 +201,8 @@ export default function TakeUForwardCaseStudy() {
           approachable personality.
         </p>
         <p>
-          The work extended beyond the illustration itself to consider how Tufy could
-          appear in different product contexts, including loading and empty states.
+          I also explored how Tufy could appear in different product contexts, including
+          loading and empty states.
         </p>
         <Figure
           columns={2}
@@ -231,8 +222,8 @@ export default function TakeUForwardCaseStudy() {
           countdown ends, or use a stopwatch instead.
         </p>
         <p>
-          The intent was to keep time management within the problem-solving workflow
-          rather than requiring students to use a separate tool.
+          This keeps time management inside the problem-solving workflow, so students
+          don&apos;t need a separate tool.
         </p>
         <Figure
           images={[
@@ -251,21 +242,20 @@ export default function TakeUForwardCaseStudy() {
           columns={2}
           aspect="1 / 1"
           images={[
-            { src: "/gami-1.png", alt: "Coin total, ranks and the monthly leaderboard", width: 721, height: 841 },
-            { src: "/gami-2.png", alt: "Title progression earned by collecting trophies", width: 925, height: 737 },
+            { src: "/case-studies/rewards-leaderboard.webp", alt: "Coin total, ranks and the monthly leaderboard", width: 721, height: 841 },
+            { src: "/case-studies/rewards-titles.webp", alt: "Title progression earned by collecting trophies", width: 925, height: 737 },
           ]}
           caption="Coins, ranks and the monthly leaderboard, and titles earned by collecting trophies."
         />
         <p>
           The wider product also underwent a visual rebrand. Working with the team, we
-          moved from an interface that relied heavily on orange and glassmorphism
-          toward a blue visual direction intended to feel more welcoming and
-          trustworthy.
+          moved from an interface that relied heavily on orange and glassmorphism to a
+          blue direction chosen to feel more welcoming and trustworthy.
         </p>
         <Figure
           images={[
-            { src: "/old-ui.svg", alt: "Previous TakeUForward problem page in orange", width: 1440, height: 1024, label: "Before" },
-            { src: "/new-ui.svg", alt: "Updated TakeUForward problem page in blue", width: 1440, height: 900, label: "After" },
+            { src: "/case-studies/rebrand-before.webp", alt: "Previous TakeUForward problem page in orange", width: 1440, height: 1024, label: "Before" },
+            { src: "/case-studies/rebrand-after.webp", alt: "Updated TakeUForward problem page in blue", width: 1440, height: 900, label: "After" },
           ]}
           caption="A problem page before and after the rebrand."
         />
@@ -275,25 +265,12 @@ export default function TakeUForwardCaseStudy() {
         </p>
       </CaseStudySection>
 
-      <CaseStudySection id="established-product" title="Designing within an established product">
+      <CaseStudySection id="established-product" title="Fitting into an established product">
         <p>
-          TakeUForward already had a large base of learners who used the platform for
-          preparation. This meant the work had to fit into an existing product, not
-          start from scratch.
-        </p>
-        <p>
-          The tutor needed to make sense in different contexts. The timer needed
-          understandable controls across its states. The mascot and gamification needed
-          to feel connected to the wider product.
-        </p>
-        <p>
-          I worked within the design team and owned the end-to-end UI/UX for the AI
-          tutor, timer, and mascot, while collaborating on the rebrand and
-          gamification.
-        </p>
-        <p>
-          The main challenge was making new experiences fit naturally into existing
-          learning workflows.
+          With 1.5 million+ learners already preparing on the platform, the work had to
+          fit into an existing product, not start from scratch. The tutor had to make
+          sense in each context, the timer needed clear controls across its states, and
+          the mascot and rewards had to feel part of the same product.
         </p>
       </CaseStudySection>
 
@@ -305,8 +282,7 @@ export default function TakeUForwardCaseStudy() {
         </p>
         <p>
           There are no verified numbers yet on retention, learning outcomes or
-          engagement, so I&apos;m not claiming any. The next step in evaluating the
-          design would be to examine:
+          engagement. To evaluate the design, I would look at:
         </p>
         <BulletList
           items={[

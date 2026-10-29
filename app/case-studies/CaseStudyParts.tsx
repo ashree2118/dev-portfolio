@@ -20,10 +20,8 @@ export function CaseStudyHero({
   meta: { label: string; value: string }[];
 }) {
   return (
-    <div className="pb-12 pt-8">
-      <p className="font-(family-name:--font-instrument-serif) text-3xl leading-tight tracking-[-0.01em] text-balance text-(--text-primary)">
-        {lead}
-      </p>
+    <div className="pb-12 pt-4">
+      <p className="max-w-xl text-lg leading-7 text-balance text-(--text-secondary)">{lead}</p>
       <ul className="mt-4 flex flex-wrap gap-1.5" role="list" aria-label="Topics">
         {tags.map((tag) => (
           <li
@@ -71,7 +69,7 @@ export function CaseStudySection({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-(--line-color) py-12">
+    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-(--line-color) py-12 first-of-type:border-t-0 first-of-type:pt-4">
       <h2
         id={`${id}-title`}
         className="font-(family-name:--font-instrument-serif) text-3xl leading-tight tracking-[-0.01em] text-balance text-(--text-primary)"

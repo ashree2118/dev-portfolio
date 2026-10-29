@@ -9,6 +9,7 @@ import {
   SubHeading,
   Takeaway,
 } from "./CaseStudyParts";
+import { JourneyPastJoin } from "./CaseStudyDiagrams";
 
 const meta = [
   { label: "Role", value: "End-to-end UI/UX designer" },
@@ -34,10 +35,10 @@ export default function EzMeetupCaseStudy() {
           host their own meetups, and connect with others attending the same event.
         </p>
         <p>
-          I saw an opportunity to connect the event itself with the people going to it.
+          I saw an opportunity to link the event itself with the people going to it.
           Discovering something interesting to attend is one part of the experience;
-          knowing who else is going and having an opportunity to connect can make the
-          experience more social.
+          knowing who else is going, and having a chance to meet them, makes it more
+          social.
         </p>
         <p>
           That idea shaped the product around three connected activities: discovering
@@ -51,8 +52,8 @@ export default function EzMeetupCaseStudy() {
 
       <CaseStudySection id="people" title="Designing the experience around people, not just events">
         <p>
-          I approached ezMeetup as a connected mobile experience rather than a
-          collection of event listings.
+          I approached ezMeetup as one mobile experience rather than a collection of
+          event listings.
         </p>
         <p>The core journeys were:</p>
         <NumberedList
@@ -64,19 +65,20 @@ export default function EzMeetupCaseStudy() {
         />
         <p>
           The attendee map was the most distinctive part of the concept because it
-          connected the first and third journeys. It extended the experience beyond
+          linked the first and third journeys. It extended the experience beyond
           choosing an event and toward discovering the people who might share it.
         </p>
+        <JourneyPastJoin />
       </CaseStudySection>
 
       <CaseStudySection id="attendee-map" title="The attendee map: connecting event discovery to real-world plans">
         <SubHeading>The problem I wanted to address</SubHeading>
         <p>
           An event page can tell someone where an event is happening and when it
-          starts. It doesn&apos;t necessarily help them understand who else is going or
-          how they might connect with those people.
+          starts. It doesn&apos;t help them understand who else is going or how they
+          might meet them.
         </p>
-        <p>The shared attendee map was designed to make that social dimension visible.</p>
+        <p>I designed the shared attendee map to make that social side visible.</p>
         <p>
           It shows the event location alongside attendee markers and distances. Instead
           of seeing only a venue, users can explore where other people attending the
@@ -87,12 +89,12 @@ export default function EzMeetupCaseStudy() {
           items={[
             "Who else is attending this event?",
             "Where are other attendees in relation to the venue?",
-            "Is there someone I could connect with or tag along with?",
+            "Is there someone I could meet or tag along with?",
           ]}
         />
         <p>
-          The intent was to help people move from discovering an event to considering
-          how they might experience it with others.
+          The goal was to help people move from discovering an event to planning how
+          they might experience it with others.
         </p>
 
         <SubHeading>Why a map?</SubHeading>
@@ -101,8 +103,8 @@ export default function EzMeetupCaseStudy() {
           spatial context that an attendee list alone would not communicate.
         </p>
         <p>
-          The design connects the event venue, attendee markers, and displayed distances
-          in one view. This allows users to understand the relationship between the
+          The design brings the event venue, attendee markers, and distances into one
+          view. This allows users to understand the relationship between the
           event and the people attending it without switching between separate screens.
         </p>
         <p>
@@ -123,11 +125,11 @@ export default function EzMeetupCaseStudy() {
               height: 848,
             },
           ]}
-          caption="From browsing meetups, to the map with distances, to event details and the event's group chat."
+          caption="Browsing nearby meetups, the map view with distances, event details with who's attending, and the event's group chat."
         />
       </CaseStudySection>
 
-      <CaseStudySection id="communication" title="Connecting the map to communication">
+      <CaseStudySection id="communication" title="From the map to the conversation">
         <p>
           A map can show people in relation to an event, but the broader experience also
           needs a way for attendees to communicate.
@@ -142,7 +144,7 @@ export default function EzMeetupCaseStudy() {
           the map adds context about who is going, and the chat provides a space for
           communication.
         </p>
-        <p>Together, they form a more connected journey than a standalone event listing.</p>
+        <p>Together, they form one journey instead of a standalone event listing.</p>
       </CaseStudySection>
 
       <CaseStudySection id="hosting" title="Making event hosting straightforward">
@@ -157,19 +159,18 @@ export default function EzMeetupCaseStudy() {
         </p>
         <p>
           The hosting experience also supports the wider product: creating events
-          provides the starting point for discovery, attendance, and attendee
-          connections.
+          is the starting point for discovery, attendance, and meeting other attendees.
         </p>
         <Figure
           images={[
             {
-              src: "/case-studies/meetup-host.webp",
-              alt: "Interest picker, host event form, photo upload and safety check-in screens",
-              width: 1603,
+              src: "/case-studies/meetup-host-flow.webp",
+              alt: "Interest picker, host event form and photo upload screens in dark and light themes",
+              width: 1202,
               height: 1642,
             },
           ]}
-          caption="Picking interests, the host flow from event details to photos, and the safety check-in."
+          caption="Picking interests, then the host flow from event details to photos."
         />
       </CaseStudySection>
 
@@ -185,8 +186,8 @@ export default function EzMeetupCaseStudy() {
           wanted while giving the app a fresh visual direction.
         </p>
         <p>
-          The color choice was also informed by my desire to differentiate the product
-          from palettes I associated with other apps in the category.
+          Many apps in the category lean on orange, yellow or purple, so teal also set
+          ezMeetup apart.
         </p>
         <p>
           I designed both dark and light themes, maintaining a consistent visual
@@ -225,9 +226,17 @@ export default function EzMeetupCaseStudy() {
         </p>
         <p>
           Safety was a supporting part of the product, not its primary purpose. The core
-          experience remained event discovery, hosting, and connecting with fellow
-          attendees.
+          experience remained event discovery, hosting, and meeting fellow attendees.
         </p>
+        <Figure
+          columns={2}
+          aspect="1 / 2"
+          images={[
+            { src: "/case-studies/meetup-safety-dark.webp", alt: "Safety check-in screen in dark theme", width: 401, height: 809 },
+            { src: "/case-studies/meetup-safety-light.webp", alt: "Safety check-in screen in light theme", width: 401, height: 809 },
+          ]}
+          caption="The post-event safety check-in, in dark and light themes."
+        />
         <Figure
           images={[
             {
@@ -239,23 +248,6 @@ export default function EzMeetupCaseStudy() {
           ]}
           caption="Profile, meetups you hosted, settings and messages, in dark and light themes."
         />
-      </CaseStudySection>
-
-      <CaseStudySection id="process" title="My process and design decisions">
-        <p>
-          I worked on the end-to-end mobile UI, designing the main journeys across
-          discovery, hosting, maps, chat, profiles, and safety.
-        </p>
-        <p>
-          The project involved bringing different user needs into one interface:
-          attendees needed to discover and explore events, hosts needed to create and
-          manage them, and people attending the same event needed a way to connect.
-        </p>
-        <p>
-          The central design decision was to treat the attendee map as part of the event
-          journey, rather than an unrelated utility. The visual identity and supporting
-          screens were then designed around the wider experience.
-        </p>
       </CaseStudySection>
 
       <CaseStudySection id="outcomes" title="Outcomes">
@@ -287,8 +279,7 @@ export default function EzMeetupCaseStudy() {
           ezMeetup explored how event discovery could become more social by connecting
           the event, its location, and the people attending it. My focus was to design a
           coherent mobile experience in which people could discover events, host their
-          own meetups, and find opportunities to connect with others going to the same
-          place.
+          own meetups, and find others going to the same place.
         </Takeaway>
       </CaseStudySection>
     </div>
