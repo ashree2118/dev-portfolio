@@ -8,6 +8,7 @@ import {
   SubHeading,
   Takeaway,
   TermGrid,
+  Testimonial,
 } from "./CaseStudyParts";
 import { HintLadder } from "./CaseStudyDiagrams";
 
@@ -280,6 +281,22 @@ export default function TakeUForwardCaseStudy() {
           round of user feedback after launch. The team continues to improve the
           experience.
         </p>
+        <Testimonial
+          author="Striver"
+          byline="Building TakeUForward"
+          handle="@striver_79"
+          href="https://x.com/striver_79/status/2091066628301869155"
+        >
+          <p className="text-sm leading-6 text-(--text-muted)">Last day of internship for @anushree210 (Design)</p>
+          <p className="font-(family-name:--font-instrument-serif) text-2xl leading-snug text-balance">
+            She contributed to one of the most important things in Zenkai – TUFY! Along
+            with it, landing pages as well.
+          </p>
+          <p className="text-sm leading-6 text-(--text-muted)">
+            Good luck 🤞 You brought in a lot of energy, team&apos;s going to miss it. Hope
+            to have you back next year 🙌
+          </p>
+        </Testimonial>
         <p>
           There are no verified numbers yet on retention, learning outcomes or
           engagement. To evaluate the design, I would look at:

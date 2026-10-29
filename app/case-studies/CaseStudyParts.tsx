@@ -196,3 +196,41 @@ export function Takeaway({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+
+export function Testimonial({
+  author,
+  byline,
+  handle,
+  href,
+  children,
+}: {
+  author: string;
+  byline: string;
+  handle: string;
+  href?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <figure className="my-8 rounded-xl border border-(--card-border) bg-(--panel-elevated) p-6">
+      <blockquote className="space-y-3 text-[15px] leading-7 text-(--text-primary)">{children}</blockquote>
+      <figcaption className="mt-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-(--line-color) pt-4 text-xs">
+        <span>
+          <span className="font-medium text-(--text-primary)">{author}</span>
+          <span className="text-(--text-muted)"> · {byline}</span>
+        </span>
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="text-(--text-muted) underline-offset-4 transition-colors hover:text-(--text-primary) hover:underline"
+          >
+            {handle} on X
+          </a>
+        ) : (
+          <span className="text-(--text-muted)">{handle} on X</span>
+        )}
+      </figcaption>
+    </figure>
+  );
+}
