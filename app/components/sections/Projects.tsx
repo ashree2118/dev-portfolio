@@ -107,7 +107,7 @@ export default function Projects() {
               <div className="px-3 pb-3">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
-                    <h4 className="font-(--font-instrument-serif) text-[18px] leading-[1.08] tracking-[-0.02em] text-(--text-primary)">
+                    <h4 className="font-(family-name:--font-instrument-serif) text-[18px] leading-[1.08] tracking-[-0.02em] text-(--text-primary)">
                       {project.name}
                     </h4>
                   </div>

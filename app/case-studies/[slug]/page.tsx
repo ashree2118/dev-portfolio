@@ -56,7 +56,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           {study.period && (
             <p className="text-sm text-(--text-secondary)">{study.period}</p>
           )}
-          <h1 className="mt-2 font-(--font-instrument-serif) text-4xl tracking-[-0.03em] text-(--text-primary)">
+          <h1 className="mt-2 font-(family-name:--font-instrument-serif) text-4xl tracking-[-0.03em] text-(--text-primary)">
             {study.name}
           </h1>
         </header>

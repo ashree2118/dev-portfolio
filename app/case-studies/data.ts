@@ -3,18 +3,28 @@ type CaseStudy = {
   slug: string;
   period?: string;
   image?: string;
+  summary?: string;
+  tags?: string[];
+  featured?: boolean;
 };
 
 export const caseStudies: CaseStudy[] = [
   {
     name: "TakeUForward",
     slug: "takeuforward",
-    period: "January–April (remote), July–August (onsite) — year to be confirmed",
-    image: "/takeuforward_logo.jpeg",
+    period: "January–August 2026",
+    image: "/case-studies/tuf-collage.webp",
+    summary: "Evolving the learning experience at TakeUForward",
+    tags: ["Product design", "AI-powered learning", "Gamification", "Visual identity"],
+    featured: true,
   },
   {
     name: "ezMeetup",
     slug: "ezmeetup",
+    image: "/case-studies/meetup-collage.webp",
+    summary: "Making events more social, from discovery to showing up together",
+    tags: ["Product design", "Mobile app", "End-to-end UI/UX", "Interaction design"],
+    featured: true,
   },
   {
     name: "Autocode",

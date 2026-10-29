@@ -1,297 +1,224 @@
-function CaseStudySection({
-  id,
-  title,
-  children,
-}: {
-  id: string;
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className="border-t border-(--line-color) py-8">
-      <h2 className="font-(--font-instrument-serif) text-2xl tracking-[-0.02em] text-(--text-primary)">
-        {title}
-      </h2>
-      <div className="mt-4 space-y-4 text-sm leading-7 text-(--text-secondary)">
-        {children}
-      </div>
-    </section>
-  );
-}
+import {
+  BulletList,
+  CaseStudyHero,
+  CaseStudySection,
+  Figure,
+  NumberedList,
+  PullQuote,
+  Strong,
+  SubHeading,
+  Takeaway,
+} from "./CaseStudyParts";
 
-function VisualPlaceholder({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="rounded-md border border-dashed border-(--card-border) bg-(--panel-elevated) px-4 py-3 text-xs leading-5 text-(--text-muted)">
-      {children}
-    </div>
-  );
-}
+const meta = [
+  { label: "Role", value: "End-to-end UI/UX designer" },
+  { label: "Project", value: "Freelance client project" },
+  { label: "Platform", value: "Mobile app" },
+  { label: "Audience", value: "Gen Z and millennials" },
+];
+
+const tags = ["Product design", "Mobile app", "End-to-end UI/UX", "Interaction design"];
 
 export default function EzMeetupCaseStudy() {
   return (
     <div className="pb-12">
-      <div className="py-7">
-        <p className="font-(--font-instrument-serif) text-2xl text-(--text-primary)">
-          Making events more social, from discovery to showing up together
-        </p>
-        <p className="mt-2 text-xs leading-5 text-(--text-muted)">
-          Product design · Mobile app · End-to-end UI/UX · Interaction design
-        </p>
-
-        <dl className="mt-5 grid gap-3 border-y border-(--line-color) py-4 text-xs leading-5 sm:grid-cols-2">
-          <div>
-            <dt className="text-(--text-muted)">Project type</dt>
-            <dd className="text-(--text-secondary)">Freelance client project</dd>
-          </div>
-          <div>
-            <dt className="text-(--text-muted)">My role</dt>
-            <dd className="text-(--text-secondary)">End-to-end UI/UX designer</dd>
-          </div>
-          <div>
-            <dt className="text-(--text-muted)">Target audience</dt>
-            <dd className="text-(--text-secondary)">Gen Z and millennials</dd>
-          </div>
-        </dl>
-      </div>
+      <CaseStudyHero
+        lead="Making events more social, from discovery to showing up together"
+        tags={tags}
+        cover={{ src: "/case-studies/meetup-collage.webp", alt: "Collage of ezMeetup app screens", width: 2000, height: 1508 }}
+        meta={meta}
+      />
 
       <CaseStudySection id="overview" title="Overview">
+        <p>Finding an event is easy. Finding people to go with is harder.</p>
         <p>
-          Discovering an event is easy. Finding people to go with can be a
-          different story.
+          ezMeetup helps people discover community events, host their own meetups
+          and connect with others who are going. It brings discovery, hosting, group
+          chats and a shared attendee map into one app. The map does more than show
+          where an event is. It shows who else is going, so people can connect or
+          tag along.
         </p>
         <p>
-          ezMeetup was designed to help people discover community events, host
-          their own meetups, and connect with others attending the same event.
+          I designed the end-to-end mobile UI: onboarding, discovery, hosting,
+          attendee maps, group chats, profiles and safety check-ins.
         </p>
+        <PullQuote label="The design challenge">
+          How might we make discovering events easier, while helping people feel
+          connected to the people they could go with?
+        </PullQuote>
+      </CaseStudySection>
+
+      <CaseStudySection id="core-experience" title="Defining the core experience">
+        <p>The product is built around three connected activities.</p>
+        <NumberedList
+          items={[
+            {
+              title: "Discover events",
+              detail: "Browse meetups, check the details and find activities that match your interests.",
+            },
+            {
+              title: "Host your own meetup",
+              detail: "Create an event, share its details and schedule, and bring a community together.",
+            },
+            {
+              title: "See who's going and connect",
+              detail: "Explore a map of people attending the same event, and connect before you arrive.",
+            },
+          ]}
+        />
         <p>
-          The product brings event discovery, event hosting, group conversations,
-          and a shared attendee map into one experience. Instead of simply
-          showing users where an event takes place, the map helps them see other
-          people attending and explore opportunities to connect or tag along.
-        </p>
-        <p>
-          I designed the end-to-end mobile UI, covering onboarding, event
-          discovery, hosting, attendee maps, group chats, profiles, and safety
-          check-ins.
-        </p>
-        <p>
-          <strong className="text-(--text-primary)">The design challenge:</strong>{" "}
-          How might we make discovering events easier while helping people feel
-          more connected to the people they could experience them with?
+          Most event apps stop at &ldquo;Join event&rdquo;. ezMeetup asks what
+          happens next: who else is going, where they are, and whether you could
+          meet up or travel together. The attendee map is what connects discovery
+          to actually going.
         </p>
       </CaseStudySection>
 
-      <CaseStudySection id="core-experience" title="01. Defining the core experience">
-        <p>The product centred on three connected activities.</p>
-        <div className="grid gap-3 sm:grid-cols-3">
-          <div className="rounded-md border border-(--card-border) bg-(--panel-elevated) p-4">
-            <h3 className="font-medium text-(--text-primary)">Discover events</h3>
-            <p className="mt-2 text-xs leading-5">
-              Browse meetups, explore event details, and find activities that
-              match your interests.
-            </p>
-          </div>
-          <div className="rounded-md border border-(--card-border) bg-(--panel-elevated) p-4">
-            <h3 className="font-medium text-(--text-primary)">Host your own meetup</h3>
-            <p className="mt-2 text-xs leading-5">
-              Create an event, share its details, publish a schedule, and bring
-              a community together.
-            </p>
-          </div>
-          <div className="rounded-md border border-(--card-border) bg-(--panel-elevated) p-4">
-            <h3 className="font-medium text-(--text-primary)">See who&apos;s going and connect</h3>
-            <p className="mt-2 text-xs leading-5">
-              Explore a map of people attending the same event, discover
-              potential companions, and connect with others before showing up.
-            </p>
-          </div>
-        </div>
+      <CaseStudySection id="visual-identity" title="A distinct visual identity">
+        <SubHeading>Why teal</SubHeading>
         <p>
-          The attendee map was an important differentiator: it connected event
-          discovery with the social experience of actually attending.
+          I studied event discovery products such as District to understand the
+          visual language of the category. Many of them leaned on orange, yellow or
+          purple.
         </p>
         <p>
-          Rather than ending the journey at “Join event,” ezMeetup explored
-          what happens next — who else is going, where they are, and whether you
-          could meet or travel together.
+          For a Gen Z and millennial audience, I wanted ezMeetup to feel modern and
+          welcoming. Teal balanced calm, trust and freshness, and set the product
+          apart from the rest.
+        </p>
+        <p>
+          I designed both dark and light themes with one consistent palette and set
+          of patterns, so the same look works for social moments and practical
+          event details alike.
+        </p>
+        <Figure
+          images={[
+            {
+              src: "/case-studies/meetup-teal.webp",
+              alt: "Welcome, sign up, profile and settings screens in dark and light themes",
+              width: 1612,
+              height: 1643,
+            },
+          ]}
+          caption="Welcome, sign up, profile and settings, in dark and light themes."
+        />
+      </CaseStudySection>
+
+      <CaseStudySection id="discovery" title="Helping people discover and join events">
+        <p>
+          People need enough information to decide whether an event is right for
+          them. Event pages show the description, host, venue, date and time,
+          schedule, capacity, who is attending and the location, laid out to scan
+          quickly with a clear way to join.
+        </p>
+        <p>But joining is only the start.</p>
+      </CaseStudySection>
+
+      <CaseStudySection id="attendee-map" title="Turning an attendee list into a way to connect">
+        <SubHeading>The shared attendee map</SubHeading>
+        <p>
+          The most distinctive part of ezMeetup is a map of the people going to the
+          same event. It shows not just where the event is, but who else is going,
+          so nobody has to show up alone.
+        </p>
+        <p>The map answers four questions:</p>
+        <BulletList
+          items={[
+            "Where is the event?",
+            "Who else is going?",
+            "Where are they, relative to the venue?",
+            "Could I meet someone, or join them on the way?",
+          ]}
+        />
+        <p>
+          It bridges the gap between deciding to go and making the event a shared
+          experience.
+        </p>
+        <Figure
+          images={[
+            {
+              src: "/case-studies/meetup-event.webp",
+              alt: "Browse meetups, attendee map with distances, event details and the event group chat",
+              width: 1682,
+              height: 848,
+            },
+          ]}
+          caption="Browsing meetups, the attendee map with distances, event details, and the event's group chat."
+        />
+      </CaseStudySection>
+
+      <CaseStudySection id="hosting" title="Making it easy to host a meetup">
+        <p>
+          ezMeetup is also for people who want to organize events, not just attend
+          them. Hosts fill in one structured flow, with the name, date, time, venue,
+          capacity, schedule and photos, and publish. No separate tool is needed
+          for each step.
+        </p>
+        <Figure
+          images={[
+            {
+              src: "/case-studies/meetup-host.webp",
+              alt: "Interest picker, host event form, photo upload and safety check-in screens",
+              width: 1603,
+              height: 1642,
+            },
+          ]}
+          caption="Picking interests, the host flow from event details to photos, and the safety check-in."
+        />
+      </CaseStudySection>
+
+      <CaseStudySection id="conversations" title="Keeping conversations with the event">
+        <p>
+          Each meetup has a group chat for its attendees. Hosts also get controls to
+          edit event details and handle requests to join.
+        </p>
+        <p>
+          Keeping the conversation inside the event links planning to showing up.
+          The app is useful before the event starts, not only once people reach the
+          venue.
         </p>
       </CaseStudySection>
 
-      <CaseStudySection id="visual-identity" title="02. Creating a distinct visual identity">
-        <h3 className="font-medium text-(--text-primary)">
-          Choosing teal for a fresh, trustworthy feel
-        </h3>
+      <CaseStudySection id="supporting-experiences" title="Supporting people through the whole journey">
         <p>
-          I conducted competitor analysis, including looking at event-discovery
-          products such as District, to understand the visual language of the
-          category.
+          Around the core flows, I designed onboarding, profiles, interests, friends
+          and meetup history.
         </p>
         <p>
-          I wanted ezMeetup to feel modern, welcoming, and appropriate for a
-          Gen Z and millennial audience. Teal felt like a good balance between
-          calmness, trust, and freshness, while offering a visual direction
-          distinct from the orange, yellow, and purple palettes I associated
-          with other products.
+          After an event, a <Strong>safety check-in</Strong> lets attendees tell
+          friends they reached home, are still on the way, or need help. Safety
+          supports the experience. It is not the main purpose of the product.
         </p>
-        <p>
-          I designed the interface in both dark and light themes, keeping the
-          brand identity consistent across the experience.
-        </p>
-        <p>
-          <strong className="text-(--text-primary)">My design focus:</strong>{" "}
-          A recognisable colour palette, consistent interface patterns, and a
-          visual language that could support both social interactions and
-          practical event information.
-        </p>
-        <VisualPlaceholder>
-          <img src="meetup-teal" alt="" />
-        </VisualPlaceholder>
-      </CaseStudySection>
-
-      <CaseStudySection id="discovery" title="03. Helping users discover and join events">
-        <p>
-          The discovery experience needed to give users the information they
-          needed to decide whether an event was right for them.
-        </p>
-        <p>
-          I designed event detail screens featuring the event description,
-          host, venue, date, time, schedule, capacity, attendee information, and
-          location.
-        </p>
-        <p>
-          The goal was to make event information easy to scan while giving users
-          a clear path to joining.
-        </p>
-        <p>But joining an event was only the beginning of the experience.</p>
-      </CaseStudySection>
-
-      <CaseStudySection
-        id="attendee-map"
-        title="04. Turning an attendee list into an opportunity to connect"
-      >
-        <h3 className="font-medium text-(--text-primary)">The shared attendee map</h3>
-        <p>
-          One of the most distinctive features of ezMeetup was the map showing
-          people attending the same event.
-        </p>
-        <p>
-          The idea was to help users discover not only where an event was
-          happening, but also who else was going.
-        </p>
-        <p>
-          This adds a social dimension to event discovery. Users could explore
-          the locations of other attendees and identify opportunities to
-          connect or tag along rather than approaching an event as an isolated
-          individual.
-        </p>
-        <p>The map experience was designed around a few key questions:</p>
-        <ul className="list-disc space-y-2 pl-5">
-          <li>Where is the event taking place?</li>
-          <li>Who else is attending?</li>
-          <li>Where are other attendees located relative to the venue?</li>
-          <li>Could I connect with someone or join them on the way?</li>
-        </ul>
-        <p>
-          The attendee map helped bridge the gap between deciding to attend and
-          making the event a shared experience.
-        </p>
-        <VisualPlaceholder>
-          <img src="meetup-event" alt="" />
-        </VisualPlaceholder>
-        <VisualPlaceholder>
-          Evidence to add: Explain how attendee locations were obtained,
-          whether users shared live or approximate locations, and how users
-          initiated contact. Confirm the location-sharing and privacy rules
-          before describing them as implemented behaviour.
-        </VisualPlaceholder>
-      </CaseStudySection>
-
-      <CaseStudySection id="hosting" title="05. Making it easy to host a meetup">
-        <p>
-          ezMeetup was designed for people who wanted to organise events, not
-          just attend them.
-        </p>
-        <p>
-          I designed a structured event creation flow where hosts could enter
-          the event name, date, time, venue, capacity, schedule, and photos.
-        </p>
-        <p>
-          The goal was to give hosts a clear way to organise event information
-          and publish a meetup without needing a separate tool for each part of
-          the process.
-        </p>
-        <VisualPlaceholder>
-          <img src="meetup-host" alt="" />
-        </VisualPlaceholder>
-      </CaseStudySection>
-
-      <CaseStudySection id="conversations" title="06. Keeping conversations connected to events">
-        <p>
-          The group chat gave attendees a way to communicate around a shared
-          meetup.
-        </p>
-        <p>
-          I designed chat interfaces and host controls for managing event
-          details and requests to join. Keeping conversations within the event
-          experience helps connect the planning stage with participation.
-        </p>
-        <p>
-          The broader design intention was to make ezMeetup useful before the
-          event begins, not only when users arrive at the venue.
-        </p>
-      </CaseStudySection>
-
-      <CaseStudySection id="supporting-experiences" title="07. Supporting users throughout the journey">
-        <p>
-          Beyond discovery, hosting, and the attendee map, I designed
-          supporting experiences including onboarding, profiles, interests,
-          friends, and meetup history.
-        </p>
-        <p>
-          I also designed post-event safety check-ins, where attendees could
-          update their status and let friends know whether they had reached
-          home, were still on their way, or needed assistance.
-        </p>
-        <p>
-          Safety was a supporting part of the overall experience, rather than
-          the product&apos;s primary purpose.
-        </p>
-        <VisualPlaceholder>
-          <img src="meetup-profile" alt="" />
-        </VisualPlaceholder>
+        <Figure
+          images={[
+            {
+              src: "/case-studies/meetup-profile.webp",
+              alt: "Profile, meetup history, settings and messages screens in dark and light themes",
+              width: 1686,
+              height: 1700,
+            },
+          ]}
+          caption="Profile, meetups you hosted, settings and messages, in dark and light themes."
+        />
       </CaseStudySection>
 
       <CaseStudySection id="reflection" title="Reflection">
         <p>
-          ezMeetup challenged me to design a connected mobile experience around
-          more than finding an event.
+          ezMeetup pushed me to design a connected mobile experience around more
+          than finding an event.
         </p>
-        <p>
-          The central opportunity was to make the people attending an event
-          part of the discovery experience itself. The shared attendee map
-          explored how location and social connection could work together to
-          help users feel more comfortable connecting with others and
-          potentially attending or travelling together.
-        </p>
-        <p>
-          The project also required balancing several distinct journeys:
-          discovering events, hosting meetups, managing conversations, and
-          supporting users after an event.
-        </p>
-        <p>
-          Working end to end allowed me to consider how these journeys fit
-          together within one product and how a consistent visual identity
-          could support the experience across different screens.
-        </p>
-        <div className="rounded-lg border border-(--card-border) bg-(--panel-elevated) p-5">
-          <h3 className="font-medium text-(--text-primary)">The takeaway</h3>
-          <p className="mt-2">
-            ezMeetup was designed to bring events and people closer together —
-            helping users discover what they want to attend, organise their
-            own meetups, and find opportunities to connect with others going to
-            the same place.
-          </p>
-        </div>
+        <BulletList
+          items={[
+            <><Strong>People are part of discovery.</Strong> The attendee map explored how location and social connection can help people feel comfortable meeting others, and even travel together.</>,
+            <><Strong>Many journeys, one product.</Strong> Discovering, hosting, chatting and checking in after an event all had to fit together.</>,
+            <><Strong>Consistency carries the experience.</Strong> Working end to end let me keep one visual identity across every screen.</>,
+          ]}
+        />
+        <Takeaway>
+          ezMeetup brings events and people closer together. It helps people discover
+          what to attend, organize their own meetups, and connect with others going
+          to the same place.
+        </Takeaway>
       </CaseStudySection>
     </div>
   );
