@@ -164,8 +164,7 @@ export default function TakeUForwardCaseStudy() {
         <CaseStudyNote label="Visuals">
           <img src="old-ui" alt="" />
           <img src="new-ui" alt="" />
-          Previous orange interface, updated blue interface, and comparable
-          screens showing how the visual treatment changed.
+      
         </CaseStudyNote>
         <CaseStudyNote label="Evidence to confirm">
           Which elements of the glassmorphism treatment were removed or changed,
@@ -253,9 +252,7 @@ export default function TakeUForwardCaseStudy() {
           <img src="tufy-entrypoint" alt="" />
           <img src="tufy-entry-2" alt="" />
           <img src="tufy-chat-collage" alt="" />
-          Guide Me entry point, flows for different problem-solving states, and
-          examples of the tutor in each product context.
-        </CaseStudyNote>
+          
         <CaseStudyNote label="Evidence to confirm">
           The exact interaction logic, how each state is detected, and whether
           testing showed that students understood or benefited from the
@@ -299,8 +296,7 @@ export default function TakeUForwardCaseStudy() {
         <CaseStudyNote label="Visuals">
           <img src="timer-1" alt="" />
           <img src="timer-2" alt="" />
-          Timer states, paused and expired states, the add-time interaction,
-          stopwatch mode, and the timer within the problem-solving interface.
+          
         </CaseStudyNote>
         <CaseStudyNote label="Evidence to confirm">
           Whether the timer was primarily designed for interview simulation,
@@ -345,8 +341,7 @@ export default function TakeUForwardCaseStudy() {
         <CaseStudyNote label="Visuals">
           <img src="gami-1" alt="" />
           <img src="gami-2" alt="" />
-          Coin-earning flow, streak interface, leaderboard, rewards, and the
-          coin-redemption journey.
+          
         </CaseStudyNote>
         <CaseStudyNote label="Evidence to confirm">
           The earning rules, how students discover the rewards, and whether
@@ -439,9 +434,7 @@ export default function TakeUForwardCaseStudy() {
         <CaseStudyNote label="Visuals">
           <img src="tufy-final" alt="" />
           <img src="tufy-different drafts" alt="" />
-          Early sketches, alternative concepts, rejected directions, silhouette
-          explorations, expression studies, final artwork, and any implemented
-          product placements.
+          
         </CaseStudyNote>
         <CaseStudyNote label="Evidence to confirm">
           Why the final concept was selected over the alternatives, whether the

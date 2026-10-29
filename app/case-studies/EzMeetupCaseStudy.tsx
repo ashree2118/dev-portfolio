@@ -144,8 +144,7 @@ export default function EzMeetupCaseStudy() {
           practical event information.
         </p>
         <VisualPlaceholder>
-          Visuals to add: competitor comparison, colour exploration, and
-          selected dark- and light-theme screens.
+          <img src="meetup-teal" alt="" />
         </VisualPlaceholder>
       </CaseStudySection>
 
@@ -197,8 +196,7 @@ export default function EzMeetupCaseStudy() {
           making the event a shared experience.
         </p>
         <VisualPlaceholder>
-          Visuals to add: event details, shared attendee map, attendee markers,
-          and any related chat or connection flow.
+          <img src="meetup-event" alt="" />
         </VisualPlaceholder>
         <VisualPlaceholder>
           Evidence to add: Explain how attendee locations were obtained,
@@ -223,8 +221,7 @@ export default function EzMeetupCaseStudy() {
           the process.
         </p>
         <VisualPlaceholder>
-          Visuals to add: host creation form, optional photo upload, and event
-          creation confirmation.
+          <img src="meetup-host" alt="" />
         </VisualPlaceholder>
       </CaseStudySection>
 
@@ -242,10 +239,6 @@ export default function EzMeetupCaseStudy() {
           The broader design intention was to make ezMeetup useful before the
           event begins, not only when users arrive at the venue.
         </p>
-        <VisualPlaceholder>
-          Visuals to add: group chat, event details editing, join requests, and
-          host interactions.
-        </VisualPlaceholder>
       </CaseStudySection>
 
       <CaseStudySection id="supporting-experiences" title="07. Supporting users throughout the journey">
@@ -264,8 +257,7 @@ export default function EzMeetupCaseStudy() {
           the product&apos;s primary purpose.
         </p>
         <VisualPlaceholder>
-          Visuals to add: onboarding, profile setup, friends, meetup history,
-          and safety check-in screens.
+          <img src="meetup-profile" alt="" />
         </VisualPlaceholder>
       </CaseStudySection>
 
