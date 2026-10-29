@@ -41,10 +41,10 @@ const steps = [
 /** Every student state enters through Guide Me, and help climbs one step at a time. */
 export function HintLadder() {
   return (
-    <DiagramFrame caption="Whatever state a student is in, help starts small and only reaches the full code when they ask for it.">
+    <DiagramFrame caption="The student's state shapes what each step focuses on. The steps stay in the same order, and the full code only comes when the student asks.">
       <div
         role="img"
-        aria-label="Four student states, not started, off track, incorrect submission and partially solved, all lead to Guide Me. Help then steps up from a hint, to a direction to think, to the algorithm and pseudocode, and to the full code only when the student asks."
+        aria-label="Four student states, not started, off track, incorrect submission and partially solved, lead to Guide Me. The state shapes what each step focuses on. Help steps up from a hint, to a direction to think, to the algorithm and pseudocode, and to the full code only when the student asks."
         className="grid items-center gap-4 sm:grid-cols-[1fr_auto_1.15fr] sm:gap-5"
       >
         <ul className="grid grid-cols-2 gap-2 sm:grid-cols-1">
@@ -93,7 +93,7 @@ export function HintLadder() {
 }
 
 const before = ["Discover", "Join"];
-const after = ["Who's going", "Group chat", "Meet up", "Check-in"];
+const after = ["Who's going", "Group chat", "Plan to meet", "Check-in"];
 
 function JourneyGroup({ title, steps, strongFirst = false }: { title: string; steps: string[]; strongFirst?: boolean }) {
   return (
@@ -122,10 +122,10 @@ function JourneyGroup({ title, steps, strongFirst = false }: { title: string; st
 /** The ezMeetup journey keeps going after the point where an event listing ends. */
 export function JourneyPastJoin() {
   return (
-    <DiagramFrame caption="An event listing ends at joining. ezMeetup carries on to who's going, the chat, meeting up and getting home safe.">
+    <DiagramFrame caption="An event listing ends at joining. ezMeetup carries on to who's going, the chat, planning to meet and getting home safe.">
       <div
         role="img"
-        aria-label="Journey: discover, then join. A typical event listing ends here. ezMeetup keeps going: see who's going on the map, the group chat, meeting up, and the safety check-in."
+        aria-label="Journey: discover, then join. A typical event listing ends here. ezMeetup keeps going: see who's going on the map, the group chat, planning to meet, and the safety check-in."
         className="flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-3"
       >
         <JourneyGroup title="Event listing" steps={before} />
