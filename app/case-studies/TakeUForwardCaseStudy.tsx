@@ -108,7 +108,7 @@ export default function TakeUForwardCaseStudy() {
         <Figure
           columns={2}
           images={[
-            { src: "/case-studies/tufy-entrypoint.webp", alt: "Guide Me button in the code editor", width: 936, height: 870 },
+            { src: "/case-studies/guide-me-editor.webp", alt: "Guide Me button in the code editor", width: 936, height: 870 },
             { src: "/case-studies/tufy-intro.webp", alt: "Tufy introducing itself and personalization options", width: 1160, height: 714 },
           ]}
           caption="Where students ask for help: the Guide Me button in the editor, and Tufy's first-run screens."
