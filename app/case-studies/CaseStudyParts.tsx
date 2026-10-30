@@ -20,10 +20,8 @@ export function CaseStudyHero({
   meta: { label: string; value: string }[];
 }) {
   return (
-    <div className="pb-12 pt-8">
-      <p className="font-(family-name:--font-instrument-serif) text-3xl leading-tight tracking-[-0.01em] text-balance text-(--text-primary)">
-        {lead}
-      </p>
+    <div className="pb-12 pt-4">
+      <p className="max-w-xl text-lg leading-7 text-balance text-(--text-secondary)">{lead}</p>
       <ul className="mt-4 flex flex-wrap gap-1.5" role="list" aria-label="Topics">
         {tags.map((tag) => (
           <li
@@ -71,7 +69,7 @@ export function CaseStudySection({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-(--line-color) py-12">
+    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-(--line-color) py-12 first-of-type:border-t-0 first-of-type:pt-4">
       <h2
         id={`${id}-title`}
         className="font-(family-name:--font-instrument-serif) text-3xl leading-tight tracking-[-0.01em] text-balance text-(--text-primary)"
@@ -196,5 +194,43 @@ export function Takeaway({ children }: { children: React.ReactNode }) {
         {children}
       </p>
     </div>
+  );
+}
+
+export function Testimonial({
+  author,
+  byline,
+  handle,
+  href,
+  children,
+}: {
+  author: string;
+  byline: string;
+  handle: string;
+  href?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <figure className="my-8 rounded-xl border border-(--card-border) bg-(--panel-elevated) p-6">
+      <blockquote className="space-y-3 text-[15px] leading-7 text-(--text-primary)">{children}</blockquote>
+      <figcaption className="mt-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-(--line-color) pt-4 text-xs">
+        <span>
+          <span className="font-medium text-(--text-primary)">{author}</span>
+          <span className="text-(--text-muted)"> · {byline}</span>
+        </span>
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="text-(--text-muted) underline-offset-4 transition-colors hover:text-(--text-primary) hover:underline"
+          >
+            {handle} on X
+          </a>
+        ) : (
+          <span className="text-(--text-muted)">{handle} on X</span>
+        )}
+      </figcaption>
+    </figure>
   );
 }

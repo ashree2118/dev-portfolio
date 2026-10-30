@@ -12,12 +12,12 @@ export const caseStudies: CaseStudy[] = [
     slug: "takeuforward",
     period: "January–August 2026",
     image: "/case-studies/tuf-collage.webp",
-    summary: "Evolving the learning experience at TakeUForward",
+    summary: "Designing an AI tutor that helps students think, not just code",
   },
   {
     name: "ezMeetup",
     slug: "ezmeetup",
     image: "/case-studies/meetup-collage.webp",
-    summary: "Making events more social, from discovery to showing up together",
+    summary: "Designing for the people behind the event",
   },
 ];
