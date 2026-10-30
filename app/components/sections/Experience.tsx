@@ -9,7 +9,7 @@ const experience = [
     period: "Sept 2026 - Present",
     logo: "/omnisavant.png",
     summary: [
-      "Working alongside the product team to design and implement new features for the autonomous product demo agent, ensuring a seamless user experience.",
+      "- Working alongside the product team to design and implement new features for the autonomous product demo agent, ensuring a seamless user experience.",
     ],
   },
   {
@@ -18,9 +18,9 @@ const experience = [
     period: "Jan 2026 - Aug 2026",
     logo: "/takeuforward_logo.jpeg",
     summary: [
-      "Designed the end-to-end UI for TUF Plus and Free mobile app, and built responsive layouts for desktop - balancing performance and usability across platforms.",
-      "Owned the product design for AI tutor and timer features, on a platform with 1.5 million+ learners - from interaction design to scalable component architecture.",
-      "Drove user journey redesign across all touchpoints, translating product requirements into intuitive, production-ready interfaces."
+      "- Designed the end-to-end UI for TUF Plus and Free mobile app, and built responsive layouts for desktop - balancing performance and usability across platforms.",
+      "- Owned the product design for AI tutor and timer features, on a platform with 1.5 million+ learners - from interaction design to scalable component architecture.",
+      "- Drove user journey redesign across all touchpoints, translating product requirements into intuitive, production-ready interfaces."
     ],
   },
   {
@@ -29,9 +29,9 @@ const experience = [
     period: "Nov 2025 - Dec 2025",
     logo: "/dodox_in_logo.jpeg",
     summary: [
-      "Contributed to production-grade web applications by implementing core frontend and backend features for reliable, real-world usage.",
-      "Resolved day-to-day development issues across the codebase, including bug fixes, API integrations, and edge-case failures.",
-      "Collaborated through pull requests, code reviews, and refactoring work to improve architecture, readability, and maintainability.",
+      "- Contributed to production-grade web applications by implementing core frontend and backend features for reliable, real-world usage.",
+      "- Resolved day-to-day development issues across the codebase, including bug fixes, API integrations, and edge-case failures.",
+      "- Collaborated through pull requests, code reviews, and refactoring work to improve architecture, readability, and maintainability.",
     ],
   },
   {
@@ -40,8 +40,8 @@ const experience = [
     period: "Sept 2025 - Oct 2025",
     logo: "/quvor_logo.jpeg",
     summary: [
-      "Designed the company landing page with a strong focus on user flow, visual hierarchy, and UX-led decision making.",
-      "Created reusable UI components, structured layouts, and polished high-fidelity mockups aligned with the brand design system.",
+      "- Designed the company landing page with a strong focus on user flow, visual hierarchy, and UX-led decision making.",
+      "- Created reusable UI components, structured layouts, and polished high-fidelity mockups aligned with the brand design system.",
     ],
   },
 ];
