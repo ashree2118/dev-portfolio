@@ -18,7 +18,7 @@ const experience = [
     period: "Jan 2026 - Aug 2026",
     logo: "/takeuforward_logo.jpeg",
     summary: [
-      "Engineered the end-to-end UI for TUF Plus and Free mobile app, and built responsive layouts for desktop - balancing performance and usability across platforms.",
+      "Designed the end-to-end UI for TUF Plus and Free mobile app, and built responsive layouts for desktop - balancing performance and usability across platforms.",
       "Owned the product design for AI tutor and timer features, used by over 1M+ users - from interaction design to scalable component architecture.",
       "Drove user journey redesign across all touchpoints, translating product requirements into intuitive, production-ready interfaces."
     ],
